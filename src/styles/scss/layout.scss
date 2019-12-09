@@ -1,0 +1,112 @@
+.content-wrap {
+    padding: 2rem 15px;
+    background-color: $color-white;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5rem;
+}
+
+section .title {
+    margin-bottom: 1rem;
+}
+
+.tasks {
+    display: none;
+
+    button.remove-btn:hover {
+        opacity: 1;
+    }
+
+    ul > li {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0.5rem 0;
+        
+        & > * {
+            position: relative;
+        }
+
+        & > .checkbox-wrap,
+        & > .button-wrap {
+            flex-grow: 0;
+        }
+
+        & > .checkbox-wrap {
+            height: 18px;
+            width: 18px;
+        }
+
+        & > .checkbox-wrap input.checkbox {
+            opacity: 0;
+            z-index: 2;
+            cursor: pointer;
+
+            &, & ~ span.faux-checkbox {
+                position: absolute;
+                height: inherit;
+                width: inherit;
+            }
+
+            & ~ span.faux-checkbox {
+                top: 0;
+                left: 0;
+                background-color: transparent;
+                border: 2px solid;
+                border-radius: 3px;
+            }
+
+            & ~ span.faux-checkbox::after {
+                position: absolute;
+                content: '';
+                left: 5px;
+                top: 1px;
+                width: 5px;
+                height: 9px;
+                border: solid $color-white;
+                border-width: 0 2px 2px 0;
+                opacity: 0;
+                transform: rotate(0deg) scale(0);
+            }
+
+            &:checked ~ span.faux-checkbox::after {
+                opacity: 1;
+                background-color: transparent;
+                border-radius: 0;
+                transform: rotate(45deg) scale(1);
+            }
+        }
+
+        & > label {
+            margin: 0 1rem;
+            flex-grow: 1;
+        }   
+    } 
+
+}
+
+footer .credits {
+    font-size: 0.75rem;
+    text-align: center;
+
+    & a {
+        display: inline-block;
+        color: rgba(255, 255, 255, 0.75);
+        text-decoration: none;
+
+        &:hover {
+            color: rgba(255, 255, 255, 1);
+        }
+
+        & > .icon {
+            display: block;
+            margin: auto;
+            font-size: 1.25rem;
+            margin-bottom: 0.25rem;
+        }
+
+        &:hover > span {
+            text-decoration: underline;
+        }
+    }
+}

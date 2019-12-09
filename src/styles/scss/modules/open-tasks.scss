@@ -1,0 +1,13 @@
+.open-tasks {
+    color: $color-base;
+
+    button.remove-btn {
+        opacity: 0.5;
+        color: $color-base;
+    }
+
+    ul > li > .checkbox-wrap input.checkbox ~ span.faux-checkbox {
+        border-color: $color-base;
+    }
+
+}

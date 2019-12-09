@@ -1,0 +1,39 @@
+.add-task {
+    .title {
+        text-align: center;
+    }
+
+    .field-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid $color-light_gray;
+    
+        input {
+            flex-grow: 1;
+            color: $color-base;
+    
+            &::placeholder {
+                color: $color-light_gray;
+            }
+        }
+    
+        button {
+            flex-grow: 0;
+            margin-left: 2rem;
+            background-color: transparent;
+    
+            .icon {
+                color: $color-base;
+                opacity: 0.5;
+            }
+    
+            &:hover .icon {
+                opacity: 1;
+            }
+        }
+    }
+    
+}

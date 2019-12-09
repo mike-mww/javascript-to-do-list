@@ -1,0 +1,36 @@
+.completed-tasks {
+    color: $color-light_gray;
+
+    button.remove-btn {
+        opacity: 0.6;
+        color: $color-light_gray;
+    }    
+
+    .title {
+        display: flex;
+        align-items: baseline;
+
+        & > * {
+            flex-grow: 0;
+        }
+
+        & > h5 {
+            flex-grow: 1;
+        }
+
+        & > button {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: inherit;
+        }
+    }
+
+    ul > li > .checkbox-wrap input.checkbox:checked ~ span.faux-checkbox {
+        background-color: $color-light_gray;
+    }
+
+    ul > li > label {
+        text-decoration: line-through;
+    }
+
+}
