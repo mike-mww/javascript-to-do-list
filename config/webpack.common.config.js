@@ -48,7 +48,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'JavaScript To-Do List',
+            title: 'JavaScript To-do List',
             template: './src/index.html',
             inject: true,
             minify: {

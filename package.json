@@ -4,8 +4,7 @@
   "scripts": {
     "build:dev": "cross-env NODE_ENV=development webpack --mode development",
     "build:prod": "cross-env NODE_ENV=production webpack --mode production",
-    "start": "webpack-dev-server --mode development --hot",
-    "start:prod": "webpack --mode production"
+    "start": "webpack-dev-server --mode development --hot"
   },
   "devDependencies": {
     "@babel/core": "^7.7.4",
