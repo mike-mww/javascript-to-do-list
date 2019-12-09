@@ -18,8 +18,7 @@ section .title {
 
     ul > li {
         display: flex;
-        flex-wrap: wrap;
-        align-items: center;
+        align-items: top;
         justify-content: space-evenly;
         padding: 0.5rem 0;
         
@@ -35,6 +34,7 @@ section .title {
         & > .checkbox-wrap {
             height: 18px;
             width: 18px;
+            margin-top: 0.25rem;
         }
 
         & > .checkbox-wrap input.checkbox {
