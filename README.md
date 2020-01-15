@@ -1,6 +1,8 @@
 # JavaScript To-do List
 Simple JavaScript application for creating a to-do list.
 
+[View Demo](https://salty-everglades-11450.herokuapp.com/)
+
 ## Getting Started
 ### Prerequisities
 * [Node.js](https://nodejs.org/)
@@ -8,25 +10,29 @@ Simple JavaScript application for creating a to-do list.
 ### Installation
 Download repository files and run the command below to install the necessary dependency packages:
 ```
+# Install server-side packages
+npm install
+
+# Install client-side packages
+cd client/
 npm install
 ```
 
-Run the following commands to launch a local development server or generate a build:
+Run the following commands to launch a local development server or generate a production build:
 ```
 # Launch local development server
-npm start
-
-# Create a development build
-npm run build:dev
+npm run dev
 
 # Create a production build
-npm run build:prod
+npm run build
 ```
 
+Also included is a **"heroku-postbuild"** script to build and deploy to Heroku.
+
 ## Built with
+* [Express.js (4.17.1)](https://www.npmjs.com/package/express/v/4.17.1)
 * [Webpack (4.41.2)](https://www.npmjs.com/package/webpack/v/4.41.2)
 * [Babel (7.7.4)](https://www.npmjs.com/package/@babel/core/v/7.7.4)
-* [Bootstrap (4.4.1)](https://getbootstrap.com/docs/4.4/getting-started/)
 * [Font Awesome (5.11.2)](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers)
 
 ## Usage
