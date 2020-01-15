@@ -1,7 +1,7 @@
 # JavaScript To-do List
 Simple JavaScript application for creating a to-do list.
 
-[View Demo](https://salty-everglades-11450.herokuapp.com/)
+[View Demo](https://mike-mww-11450.herokuapp.com/)
 
 ## Getting Started
 ### Prerequisities
