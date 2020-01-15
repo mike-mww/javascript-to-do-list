@@ -1,0 +1,14 @@
+{
+  "name": "javascript-to-do-list",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "npm run dev --prefix client",
+    "build": "npm run build --prefix client",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
