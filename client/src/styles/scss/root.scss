@@ -1,35 +1,44 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i");
 
-html, body {
-    color: $color-base;
+* {
+    box-sizing: border-box;
 }
 
 body {
-    padding: 2rem 0 4rem;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem $gutter 4rem;
     font-family: 'Open Sans', sans-serif;
+    color: $color-base;
     background-image: linear-gradient(to bottom, #04A1BF, #37dafb);
     background-attachment: fixed;
 }
 
 main {
+    width: 640px;
+    max-width: 100%;
     margin-bottom: 2rem;
 }
 
 section {
-    margin-bottom: 30px;
-
-    &:last-of-type {
-        margin-bottom: 0;
-    }
+    margin-bottom: 1rem;
 }
 
 h1, h5 {
-    margin-bottom: 0;
+    font-weight: 700;
+    margin: 0;
 }
 
 h1 {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1rem;
 }
 
 ul {
@@ -42,14 +51,16 @@ ul {
     }
 }
 
-input, input:focus {
-    border: 0;
-    outline: 0;
-}
-
+input, input:focus,
 button, button:focus {
     padding: 0;
+    font-family: inherit;
+    font-size: inherit;
     border: 0;
     outline: 0;
     background-color: transparent;
+}
+
+button {
+    cursor: pointer;
 }

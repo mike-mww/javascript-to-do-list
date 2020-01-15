@@ -1,5 +1,3 @@
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/js/all';
 import './styles/scss/_main.scss';
 
@@ -7,18 +5,14 @@ import TaskItemCheckbox from './js/components/TaskItemCheckbox';
 import TaskItemLabel from './js/components/TaskItemLabel';
 import TaskItemRemoveButton from './js/components/TaskItemRemoveButton';
 
-/**
- * #anchor globals
- */
+// #anchor Locals
 const input                         = document.getElementById('user-input');
 const addTaskBtn                    = document.getElementById('add-task-btn');
 const removeAllCompletedTasksBtn    = document.getElementById('remove-all-btn');
 const openTasks                     = document.querySelector('.open-tasks');
 const completedTasks                = document.querySelector('.completed-tasks');
 
-/**
- * #anchor event listeners
- */
+// #anchor Event Listeners
 input.addEventListener('keypress', addTaskOnKeypressHandler);
 addTaskBtn.addEventListener('click', addTaskHandler);
 removeAllCompletedTasksBtn.addEventListener('click', removeAllCompletedTasksHandler);
@@ -85,8 +79,10 @@ function checkTaskLists()
     taskSections.forEach( (section) => {
         if ( section.querySelector('ul').hasChildNodes() ) {
             section.style.display = 'block';
+            section.classList.add('has-tasks');
         } else {
             section.removeAttribute('style');
+            section.classList.remove('has-tasks');
         }
     });
 }

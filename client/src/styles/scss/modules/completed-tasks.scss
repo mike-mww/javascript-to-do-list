@@ -1,3 +1,8 @@
+.open-tasks.has-tasks ~ .completed-tasks {
+    padding-top: 1rem;
+    border-top: 1px solid $color-light_gray2;
+}
+
 .completed-tasks {
     color: $color-light_gray;
 
